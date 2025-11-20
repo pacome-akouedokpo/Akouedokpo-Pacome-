@@ -1,0 +1,138 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AMP Portfolio – akouedokpo Pacome</title>
+    
+   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="description" content="Web developer specialized in AMP HTML. Discover my projects and technical skills.">
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+
+    <style amp-custom>
+      body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+      h1, h2 { color: #333; }
+      .section { margin-bottom: 40px; }
+      .skills span { background: #eee; padding: 6px 12px; margin: 5px; display: inline-block; border-radius: 5px; }
+      .reviews p { background: #fff; padding: 10px; border-left: 4px solid #ccc; margin: 10px 0; }
+      button { padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 4px; }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Introduction -->
+    <section class="section">
+      <h1>👋 Hi, I'm akouedokpo Pacome.</h1>
+      <amp-img src="vibes.jpg" width="120" height="120" layout="fixed" alt="Photo of [Your Name]" style="border-radius: 50%; margin-bottom: 10px;"></amp-img>
+      <p>I'm a passionate web developer specialized in AMP HTML, technical SEO, and mobile performance. I love AMP because it's open-source, lightning-fast, mobile-friendly, and built for SEO excellence.</p>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2>🛠️ Key Skills</h2>
+      <div class="skills">
+        <span>AMP HTML</span>
+        <span>SEO</span>
+        <span>PHP / JavaScript</span>
+        <span>Mobile Optimization</span>
+        <span>Print-on-Demand</span>
+        <span>Database</span>
+        <span>HTML</span>
+        <span>Json file</span>
+        <span>Freelancing</span>
+                   
+      </div>
+    </section>
+
+    <!-- AMP Carousel -->
+    <section class="section">
+      <h2>🎞️ Project Gallery (amp-carousel)</h2>
+      <amp-carousel width="400" height="300" layout="responsive" type="slides">
+        <amp-img src="vibes.jpg" width="400" height="300" layout="responsive" alt="Project 1"></amp-img>
+        <amp-img src="vibes.jpg" width="400" height="300" layout="responsive" alt="Project 2"></amp-img>
+      </amp-carousel>
+    </section>
+
+    <!-- AMP Accordion -->
+    <section class="section">
+      <h2>📂 Projects (amp-accordion)</h2>
+      <amp-accordion>
+        <section>
+          <h4>🧵 POD AMP</h4>
+          <p>Print-on-Demand AMP system with Spreadshop integration, variant simulator, and fast conversion funnel.</p>
+        </section>
+        <section>
+          <h4>⚡ AMP Portfolio</h4>
+          <p>SEO-optimized AMP page with structured data, canonical tags, and ultra-fast loading.</p>
+        </section>
+      </amp-accordion>
+    </section>
+
+    <!-- Static Reviews -->
+    <section class="section">
+      <h2>🌟 Client Reviews</h2>
+      <div class="reviews">
+
+<p>⭐️⭐️⭐️⭐️⭐️ “Super responsive developer, very professional and passionate!” – Julie</p>
+        <p>⭐️⭐️⭐️⭐️ “Great AMP project, fast and well structured.” – Karim</p>
+      </div>
+    </section>
+<!-- AMP Bind Interaction -->
+<section class="section">
+  <h2>👍 Dynamic Interaction (amp-bind)</h2>
+  <amp-state id="likeState">
+    <script type="application/json">
+      { "liked": false, "count": 100 }
+    </script>
+  </amp-state>
+  <button
+    on="tap:AMP.setState({
+      likeState: {
+        liked: !likeState.liked,
+        count: likeState.liked ? likeState.count - 1 : likeState.count + 1
+      }
+    })"
+  >
+    <span [text]="likeState.liked ? '💔 Unlike' : '👍 Like this portfolio'"></span>
+    (<span [text]="likeState.count">100</span>)
+  </button>
+</section>
+
+<!-- AMP Form -->
+<section class="section">
+  <h2>📬 Contact Me (amp-form)</h2>
+  <form method="post" action-xhr="/contact" target="_top">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="Your message"></textarea>
+    <button type="submit">Send Message</button>
+    <div submit-error>
+        <template type="amp-mustache">submit succes</template>
+  </form>
+</section>
+
+<!-- Social Share -->
+<section class="section">
+  <h2>🔗 Share This Portfolio</h2>
+  <amp-social-share type="linkedin" width="45" height="33"></amp-social-share>
+  <amp-social-share type="twitter" width="45" height="33"></amp-social-share>
+  <amp-social-share type="facebook" width="45" height="33"></amp-social-share>
+  <amp-social-share type="email" width="45" height="33"></amp-social-share>
+  <amp-social-share type="whatsapp" width="45" height="33"></amp-social-share>
+</section>
+
+<!-- Footer -->
+<footer class="section">
+  <p>📧 Email: <a href="mailto:pakoue714@gmail.com">pakoue714@gmail.com</a></p>
+  <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/pacome01" target="_blank">linkedin.com/in/pacome01</a></p>
+</footer>
+  </body>
+</html>
+
